@@ -7,10 +7,13 @@ public:
 	enum class eState
 	{
 		Title, 
+		Controls, 
 		StartGame, 
-		StartLevel, 
+		StartLevelOne,
 		LevelOne, 
+		StartLevelTwo,
 		LevelTwo, 
+		StartLevelThree,
 		LevelThree, 
 		Game,
 		GameWin,
@@ -26,7 +29,9 @@ public:
 
 private: 
 	void UpdateTitle(float dt); 
-	void UpdateLevelStart(float dt); 
+	void UpdateLevelOneStart(float dt); 
+	void UpdateLevelTwoStart(float dt); 
+	void UpdateLevelThreeStart(float dt); 
 
 	void OnAddPoints(const nc::Event& event);
 	//void OnPlayerHurt(const nc::Event& event);

@@ -1,10 +1,13 @@
 #pragma once
 #include "Base/Actor.h"
+#include "Math/Vector2.h"
 
 class Player : public nc::Actor
 {
 public:
 	Player(const nc::Transform transform, std::shared_ptr<nc::Shape> shape, float speed); 
+
+	void Initialize() override; 
 
 	void Update(float dt);
 	void OnCollision(Actor* actor) override;
@@ -12,5 +15,7 @@ public:
 private:
 	float fireTimer{ 0 }; 
 	float fireRate{ 0.2f }; 
-	float speed = 300; 
+	float fireRate2{ 1.0f }; 
+	float speed = 1000; 
+	nc::Vector2 velocity; 
 };

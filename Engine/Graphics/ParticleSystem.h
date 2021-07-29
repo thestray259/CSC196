@@ -27,6 +27,7 @@ namespace nc
 		void Draw(Core::Graphics& graphics) override; 
 
 		void Create(const Vector2& position, size_t count, float lifetime, const Color& color, float speed); 
+		void Create(const Vector2& position, size_t count, float lifetime, const std::vector<Color>& color, float speed, float angle, float angelRange); 
 
 	private:
 		std::vector<Particle> particles; 
